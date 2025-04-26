@@ -13,5 +13,4 @@ In the near future, Fixr plans to introduce push notifications for booking updat
 
 Fixr is available for download on both Android and iOS platforms, making it accessible to a wide range of users. The team behind Fixr is committed to continuously improving the platform, rolling out new features, and ensuring users have the best experience possible every time they need a helping hand at home.
 
-For support, users can contact the Fixr team directly at support@fixrapp.com or visit the official website at www.fixrapp.com. Fixr is here to redefine home services — fast, reliable, and always within reach. Download today and experience the smarter way to fix your home!
-
+For support, users can contact the Fixr team directly at sanjay13649@gmail.com
