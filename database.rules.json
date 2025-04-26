@@ -1,0 +1,45 @@
+{
+  "rules": {
+    "bookings": {
+      ".read": "auth != null",
+      ".indexOn": ["userId", "servicePersonId", "status", "timestamp"],
+      "$bookingId": {
+        ".write": "auth != null && (!data.exists() || data.child('userId').val() === auth.uid)",
+        ".validate": "newData.hasChildren(['userId', 'servicePersonId', 'serviceName', 'amount', 'status'])"
+      }
+    },
+    "user_bookings": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        ".indexOn": ["timestamp", "status"]
+      }
+    },
+    "service_person_bookings": {
+      "$personId": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        ".indexOn": ["timestamp", "status"]
+      }
+    },
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    },
+    "services": {
+      ".read": true,
+      ".write": "auth != null && root.child('users').child(auth.uid).child('isAdmin').val() === true"
+    },
+    "servicePersons": {
+      ".read": true,
+      ".write": "auth != null && root.child('users').child(auth.uid).child('isAdmin').val() === true",
+      "$personId": {
+        "rating": {
+          ".write": "auth != null"
+        }
+      }
+    }
+  }
+}

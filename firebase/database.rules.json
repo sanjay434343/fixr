@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid",
+        ".validate": "newData.hasChildren(['email', 'name'])",
+        "email": { ".validate": "newData.isString() && newData.val().matches(/^[^@]+@[^@]+\.[^@]+$/)" },
+        "name": { ".validate": "newData.isString() && newData.val().length > 0" },
+        "phone": { ".validate": "!newData.exists() || newData.isString()" },
+        "address": { ".validate": "!newData.exists() || newData.isString()" },
+        "doornum": { ".validate": "!newData.exists() || newData.isString()" },
+        "landmark": { ".validate": "!newData.exists() || newData.isString()" },
+        "createdAt": { ".validate": "!newData.exists() || newData.isString()" },
+        "fcmToken": { ".validate": "!newData.exists() || newData.isString()" }
+      }
+    }
+  }
+}
