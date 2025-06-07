@@ -1,0 +1,10 @@
+{
+  "name": "Fixr",
+  "version": "1.0.0",
+  "description": "Fixr is a trusted home service platform that connects users with verified professionals like electricians, plumbers, and cleaners. With AI chatbot support, real-time tracking, and a zone-based booking system, Fixr ensures fast, reliable, and secure home service experiences.",
+  "icon_url": "https://github.com/sanjay434343/fixr/blob/main/assets/images/logo.png?raw=true",
+  "release": "https://github.com/sanjay434343/fixr/releases/tag/1.0.0",
+  "package_name": "com.example.fixr",
+  "changelog": "Initial release: Zone-based home service booking, real-time tracking, AI chatbot assistant, verified professionals, and secure payments.",
+  "category": "Utilities"
+}
